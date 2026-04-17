@@ -174,22 +174,7 @@ tbody tr:nth-child(even) {
 .status {
     padding: 6px;
     border-radius: 6px;
-    border: none;
     font-weight: bold;
-    cursor: pointer;
+    color: white;
 }
-
-/* CORES STATUS */
-
-
-/* RESPONSIVO (scroll horizontal se precisar) */
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-}
-
-
-
-
-
 
