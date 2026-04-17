@@ -1,0 +1,86 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #cf2424, #1e1e2f);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER */
+section {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* LOGO */
+ img {
+    width: 450px;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+fieldset {
+    border: none;
+}
+
+/* TÍTULO */
+h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+/* FOCO */
+input:focus {
+    border-color: #c22129;
+    outline: none;
+    box-shadow: 0 0 5px rgba(221, 75, 75, 0.5);
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #c22d2d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* HOVER BOTÃO */
+button:hover {
+    background: #d64a4a;
+}
+
+/* LINK (tirar estilo padrão) */
+a {
+    text-decoration: none;
+}
+

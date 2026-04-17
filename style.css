@@ -1,0 +1,195 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 200px;
+    background: #c72525;
+    color: #fff;
+    padding: 20px;
+}
+
+/* LOGO */
+.sidebar img {
+    width: 120px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* TÍTULO MENU */
+.sidebar h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+/* MENU */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    margin-left: -20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ccc;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* HOVER MENU */
+.sidebar ul li a:hover {
+    background: #be4646;
+    color: #fff;
+}
+
+/* CONTEÚDO */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TÍTULO */
+.content h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* CARDS */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+/* EFEITO HOVER CARD */
+.card:hover {
+    transform: translateY(-5px);
+}   
+
+/* TEXTO DOS CARDS */
+.card h5 {
+    font-size: 20px;
+    color: #000000;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #380d0d;
+}
+.card::before { 
+    content: ""; 
+    display: block; 
+    height: 5px; 
+    width: 100%; 
+    background: linear-gradient(90deg, #b91111, #5c252a); 
+    border-radius: 12px 12px 0 0; 
+    margin-bottom: 10px; 
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* CABEÇALHO */
+thead {
+    background: #b91111;
+    color: #fff;
+}
+
+th {
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* LINHAS */
+td {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* DIVISÃO ENTRE LINHAS */
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: 0.2s;
+}
+
+/* HOVER */
+tbody tr:hover {
+    background: #f5f7ff;
+}
+
+/* LINHAS ALTERNADAS */
+tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* SELECT STATUS */
+.status {
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CORES STATUS */
+
+
+/* RESPONSIVO (scroll horizontal se precisar) */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+
+
+
+
