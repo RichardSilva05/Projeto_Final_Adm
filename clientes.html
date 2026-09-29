@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Clientes - Painel - Sabino Gesso</title>
+
+    <meta
+        name="robots"
+        content="noindex, nofollow"
+    >
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="clientes.css"
+    >
+
+    <script src="sair.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         LAYOUT
+    ====================================================== -->
+
+    <div class="layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="logo.png"
+                    alt="Logo Sabino Gesso"
+                >
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav>
+
+                <ul>
+
+
+                    <!-- VISÃO GERAL -->
+
+                    <li>
+
+                        <a href="painel.html">
+
+                            <i class="bi bi-house"></i>
+
+                            <span>
+                                Visão Geral
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- ORÇAMENTOS -->
+
+                    <li>
+
+                        <a href="orcamentos.html">
+
+                            <i class="bi bi-receipt"></i>
+
+                            <span>
+                                Orçamentos
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- CLIENTES -->
+
+                    <li>
+
+                        <a
+                            href="clientes.html"
+                            class="ativo"
+                        >
+
+                            <i class="bi bi-people"></i>
+
+                            <span>
+                                Clientes
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- RELATÓRIOS -->
+
+                    <li>
+
+                        <a href="relatorios.html">
+
+                            <i class="bi bi-bar-chart-line"></i>
+
+                            <span>
+                                Relatórios
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- PROJETOS -->
+
+                    <li>
+
+                        <a href="projetos.html">
+
+                            <i class="bi bi-kanban"></i>
+
+                            <span>
+                                Projetos
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- CONFIGURAÇÕES -->
+
+                    <li>
+
+                        <a href="configuracoes.html">
+
+                            <i class="bi bi-gear"></i>
+
+                            <span>
+                                Configurações
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- SAIR -->
+
+                    <li class="menu-sair">
+                        <a href="login.html" onclick="return confirmarSaida()">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sair</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <main class="content">
+
+
+            <!-- =================================================
+                 CABEÇALHO
+            ================================================== -->
+
+            <div class="cabecalho">
+
+                <h1>
+                    Clientes
+                </h1>
+
+                <button
+                    type="button"
+                    class="btn-adicionar-cliente"
+                    id="btnAdicionarCliente"
+                >
+
+                    <i class="bi bi-plus-lg"></i>
+
+                    Adicionar Cliente
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BUSCA
+            ================================================== -->
+
+            <div class="barra-pesquisa">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="buscarCliente"
+                    placeholder="Buscar clientes..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CLIENTES
+            ================================================== -->
+
+            <section class="clientes-grid">
+
+
+                <!-- =================================================
+                     JOÃO SOUZA
+                ================================================== -->
+
+                <article
+                    class="card-cliente"
+                    data-nome="João Souza"
+                >
+
+                    <div class="cliente-topo">
+
+
+                        <div class="cliente-avatar avatar-vermelho">
+
+                            JS
+
+                        </div>
+
+
+                        <div class="cliente-info">
+
+                            <h2>
+                                João Souza
+                            </h2>
+
+                            <p>
+                                <i class="bi bi-telephone"></i>
+                                (11) 99999-9999
+                            </p>
+
+                            <p>
+                                <i class="bi bi-envelope"></i>
+                                joao.souza@email.com
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn-menu-cliente"
+                            title="Opções"
+                        >
+
+                            <i class="bi bi-three-dots-vertical"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="projetos-recentes">
+
+                        <strong>
+                            Recentes Projetos:
+                        </strong>
+
+                        <span>
+                            10 obras
+                        </span>
+
+                    </div>
+
+
+                    <p class="projeto">
+
+                        <i class="bi bi-file-earmark-text"></i>
+
+                        Projeto Residencial, Projeto Comercial
+
+                    </p>
+
+
+                    <div class="cliente-rodape">
+
+                        <span>
+                            5 projetos
+                        </span>
+
+                        <button
+                            type="button"
+                            class="btn-detalhes"
+                        >
+                            Ver Detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     MARIA FERNANDES
+                ================================================== -->
+
+                <article
+                    class="card-cliente"
+                    data-nome="Maria Fernandes"
+                >
+
+                    <div class="cliente-topo">
+
+
+                        <div class="cliente-avatar avatar-azul">
+
+                            MF
+
+                        </div>
+
+
+                        <div class="cliente-info">
+
+                            <h2>
+                                Maria Fernandes
+                            </h2>
+
+                            <p>
+                                <i class="bi bi-telephone"></i>
+                                (21) 98888-8888
+                            </p>
+
+                            <p>
+                                <i class="bi bi-envelope"></i>
+                                maria.fernandes@email.com
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn-menu-cliente"
+                            title="Opções"
+                        >
+
+                            <i class="bi bi-three-dots-vertical"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="projetos-recentes">
+
+                        <strong>
+                            Recentes Projetos:
+                        </strong>
+
+                        <span>
+                            10 obras
+                        </span>
+
+                    </div>
+
+
+                    <p class="projeto">
+
+                        <i class="bi bi-envelope"></i>
+
+                        Projeto Corporativo, Reforma de Escritório
+
+                    </p>
+
+
+                    <div class="cliente-rodape">
+
+                        <span>
+                            6 projetos
+                        </span>
+
+                        <button
+                            type="button"
+                            class="btn-detalhes"
+                        >
+                            Ver Detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PEDRO LIMA
+                ================================================== -->
+
+                <article
+                    class="card-cliente"
+                    data-nome="Pedro Lima"
+                >
+
+                    <div class="cliente-topo">
+
+
+                        <div class="cliente-avatar avatar-cinza">
+
+                            PL
+
+                        </div>
+
+
+                        <div class="cliente-info">
+
+                            <h2>
+                                Pedro Lima
+                            </h2>
+
+                            <p>
+                                <i class="bi bi-telephone"></i>
+                                (31) 97777-7777
+                            </p>
+
+                            <p>
+                                <i class="bi bi-envelope"></i>
+                                pedro.lima@email.com
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn-menu-cliente"
+                            title="Opções"
+                        >
+
+                            <i class="bi bi-three-dots-vertical"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="projetos-recentes">
+
+                        <strong>
+                            Recentes Projetos:
+                        </strong>
+
+                        <span>
+                            10 obras
+                        </span>
+
+                    </div>
+
+
+                    <p class="projeto">
+
+                        <i class="bi bi-building"></i>
+
+                        Projeto Corporativo, Reforma de Escritório
+
+                    </p>
+
+
+                    <div class="cliente-rodape">
+
+                        <span>
+                            4 projetos
+                        </span>
+
+                        <button
+                            type="button"
+                            class="btn-detalhes"
+                        >
+                            Ver Detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     ANA OLIVEIRA
+                ================================================== -->
+
+                <article
+                    class="card-cliente"
+                    data-nome="Ana Oliveira"
+                >
+
+                    <div class="cliente-topo">
+
+
+                        <div class="cliente-avatar avatar-laranja">
+
+                            AO
+
+                        </div>
+
+
+                        <div class="cliente-info">
+
+                            <h2>
+                                Ana Oliveira
+                            </h2>
+
+                            <p>
+                                <i class="bi bi-telephone"></i>
+                                (41) 96666-6666
+                            </p>
+
+                            <p>
+                                <i class="bi bi-envelope"></i>
+                                ana.oliveira@email.com
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn-menu-cliente"
+                            title="Opções"
+                        >
+
+                            <i class="bi bi-three-dots-vertical"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="projetos-recentes">
+
+                        <strong>
+                            Recentes Projetos:
+                        </strong>
+
+                        <span>
+                            10 obras
+                        </span>
+
+                    </div>
+
+
+                    <p class="projeto">
+
+                        <i class="bi bi-envelope"></i>
+
+                        Projeto Residencial, Cenário Comercial
+
+                    </p>
+
+
+                    <div class="cliente-rodape">
+
+                        <span>
+                            7 projetos
+                        </span>
+
+                        <button
+                            type="button"
+                            class="btn-detalhes"
+                        >
+                            Ver Detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     VICENTE ROCHA
+                ================================================== -->
+
+                <article
+                    class="card-cliente"
+                    data-nome="Vicente Rocha"
+                >
+
+                    <div class="cliente-topo">
+
+
+                        <div class="cliente-avatar avatar-verde">
+
+                            VR
+
+                        </div>
+
+
+                        <div class="cliente-info">
+
+                            <h2>
+                                Vicente Rocha
+                            </h2>
+
+                            <p>
+                                <i class="bi bi-telephone"></i>
+                                (71) 95555-5555
+                            </p>
+
+                            <p>
+                                <i class="bi bi-envelope"></i>
+                                vicente.rocha@email.com
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn-menu-cliente"
+                            title="Opções"
+                        >
+
+                            <i class="bi bi-three-dots-vertical"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="projetos-recentes">
+
+                        <strong>
+                            Recentes Projetos:
+                        </strong>
+
+                        <span>
+                            8 obras
+                        </span>
+
+                    </div>
+
+
+                    <p class="projeto">
+
+                        <i class="bi bi-building"></i>
+
+                        Projeto Residencial
+
+                    </p>
+
+
+                    <div class="cliente-rodape">
+
+                        <span>
+                            5 projetos
+                        </span>
+
+                        <button
+                            type="button"
+                            class="btn-detalhes"
+                        >
+                            Ver Detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     MARCOS PERÉRA
+                ================================================== -->
+
+                <article
+                    class="card-cliente"
+                    data-nome="Marcos Peréra"
+                >
+
+                    <div class="cliente-topo">
+
+
+                        <div class="cliente-avatar avatar-roxo">
+
+                            MP
+
+                        </div>
+
+
+                        <div class="cliente-info">
+
+                            <h2>
+                                Marcos Peréra
+                            </h2>
+
+                            <p>
+                                <i class="bi bi-telephone"></i>
+                                (51) 94444-4444
+                            </p>
+
+                            <p>
+                                <i class="bi bi-envelope"></i>
+                                marcos.pereira@email.com
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn-menu-cliente"
+                            title="Opções"
+                        >
+
+                            <i class="bi bi-three-dots-vertical"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="projetos-recentes">
+
+                        <strong>
+                            Recentes Projetos:
+                        </strong>
+
+                        <span>
+                            9 obras
+                        </span>
+
+                    </div>
+
+
+                    <p class="projeto">
+
+                        <i class="bi bi-file-earmark-text"></i>
+
+                        Projeto Comercial
+
+                    </p>
+
+
+                    <div class="cliente-rodape">
+
+                        <span>
+                            6 projetos
+                        </span>
+
+                        <button
+                            type="button"
+                            class="btn-detalhes"
+                        >
+                            Ver Detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="clientes.js"></script>
+
+
+</body>
+
+</html>
