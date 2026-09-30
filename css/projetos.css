@@ -1,221 +1,280 @@
 /* =========================================================
-   RESET
-========================================================= */
+   PROJETOS - PAINEL SABINO GESSO
+   ========================================================= */
 
-* {
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,
-body {
-    width: 100%;
-    min-height: 100%;
-}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
-    background-color: #f3f3f3;
-
-    color: #000;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+    background: #f3f3f3;
+    color: #333;
 }
 
 
 /* =========================================================
    LAYOUT
-========================================================= */
+   ========================================================= */
 
 .layout {
     display: flex;
-
-    width: 100%;
     min-height: 100vh;
 }
 
 
 /* =========================================================
    SIDEBAR
-========================================================= */
+   ========================================================= */
 
 .sidebar {
     width: 220px;
-    min-width: 220px;
     min-height: 100vh;
-
-    background-color: rgb(236, 78, 78);
-
-    padding: 40px 20px;
-
-    color: #ffffff;
+    background: rgb(236, 78, 78);
+    padding: 20px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
 }
 
-
-/* =========================================================
-   LOGO
-========================================================= */
 
 .sidebar-logo {
     display: flex;
-
     justify-content: center;
     align-items: center;
-
-    margin-bottom: 55px;
+    margin-bottom: 30px;
 }
 
+
 .sidebar-logo img {
-    width: 130px;
+    width: 150px;
+    max-width: 100%;
     height: auto;
 }
 
 
-/* =========================================================
-   MENU
-========================================================= */
-
 .sidebar nav ul {
     list-style: none;
-
-    margin: 0;
-    padding: 0;
 }
+
 
 .sidebar nav ul li {
-    margin-bottom: 24px;
+    margin-bottom: 8px;
 }
+
 
 .sidebar nav ul li a {
     display: flex;
-
     align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
 
-    gap: 10px;
-
-    padding: 0 12px;
-
-    color: #ffffff;
-
+    color: #fff;
     text-decoration: none;
 
-    font-size: 14px;
+    border-radius: 8px;
 
-    transition: opacity 0.2s ease;
+    font-size: 15px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
-.sidebar nav ul li a:hover {
-    opacity: 0.8;
-}
 
 .sidebar nav ul li a i {
-    font-size: 15px;
+    font-size: 18px;
+}
+
+
+.sidebar nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+.sidebar nav ul li a.ativo {
+    background: #fff;
+    color: rgb(236, 78, 78);
 }
 
 
 /* =========================================================
-   MENU ATIVO
-========================================================= */
+   SAIR
+   ========================================================= */
 
-.sidebar nav ul li a.ativo {
-    background-color: #ffffff;
-
-    color: rgb(236, 78, 78);
-
-    border-radius: 8px;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    font-weight: bold;
+.menu-sair {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 
 /* =========================================================
    CONTEÚDO
-========================================================= */
+   ========================================================= */
 
 .content {
-    flex: 1;
-
-    min-width: 0;
-
-    padding: 28px 40px;
-
-    background-color: #f3f3f3;
+    width: calc(100% - 220px);
+    margin-left: 220px;
+    padding: 30px;
 }
 
 
 /* =========================================================
    CABEÇALHO
-========================================================= */
+   ========================================================= */
 
 .cabecalho {
     display: flex;
-
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 
-    gap: 20px;
-
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
 
+
 .cabecalho h1 {
-    margin: 0;
-
     font-size: 28px;
-
-    font-weight: 700;
-
-    color: #000;
+    color: #333;
 }
 
 
 /* =========================================================
    BOTÃO NOVO PROJETO
-========================================================= */
+   ========================================================= */
 
 .btn-novo-projeto {
     display: inline-flex;
-
     align-items: center;
-    justify-content: center;
-
     gap: 8px;
 
-    padding: 11px 18px;
-
     border: none;
-
     border-radius: 8px;
 
-    background-color: rgb(236, 78, 78);
+    padding: 11px 17px;
 
-    color: #ffffff;
+    background: rgb(236, 78, 78);
+    color: #fff;
 
     font-size: 14px;
-
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: background-color 0.2s ease;
+    transition: background 0.2s ease;
 }
 
+
 .btn-novo-projeto:hover {
-    background-color: #db4d4d;
+    background: #db4d4d;
+}
+
+
+/* =========================================================
+   CONTAINER DE PROJETOS
+   ========================================================= */
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* =========================================================
+   GRUPO DO CLIENTE
+   ========================================================= */
+
+.cliente-projetos {
+    background: #fff;
+
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+
+    padding: 22px;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   CABEÇALHO DO CLIENTE
+   ========================================================= */
+
+.cliente-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #e8e8e8;
+}
+
+
+.cliente-identificacao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+.cliente-identificacao h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+
+.codigo-cliente {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    background: #f1f1f1;
+    color: #555;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.quantidade-projetos {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #777;
+
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+.quantidade-projetos i {
+    color: rgb(236, 78, 78);
+    font-size: 17px;
 }
 
 
 /* =========================================================
    GRID DE PROJETOS
-========================================================= */
+   ========================================================= */
 
 .projetos-grid {
     display: grid;
@@ -223,223 +282,267 @@ img {
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 16px;
+    gap: 20px;
 }
 
 
 /* =========================================================
    CARD DO PROJETO
-========================================================= */
+   ========================================================= */
 
 .card-projeto {
+    background: #fff;
+
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+
     overflow: hidden;
 
-    background-color: #ffffff;
-
-    border-radius: 5px;
-
     box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.08);
+        0 2px 6px rgba(0, 0, 0, 0.05);
 
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
+
 .card-projeto:hover {
     transform: translateY(-2px);
 
     box-shadow:
-        0 5px 14px rgba(0, 0, 0, 0.1);
+        0 5px 14px rgba(0, 0, 0, 0.09);
 }
 
 
 /* =========================================================
-   IMAGEM
-========================================================= */
+   IMAGEM / TOPO DO PROJETO
+   ========================================================= */
 
 .imagem-projeto {
-    width: 100%;
-    height: 125px;
+    height: 150px;
 
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    background-color: #dddddd;
+    background: #f5f5f5;
+
+    border-bottom: 1px solid #e5e5e5;
 }
+
 
 .imagem-projeto img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: transform 0.3s ease;
-}
-
-.card-projeto:hover .imagem-projeto img {
-    transform: scale(1.03);
+    width: 130px;
+    max-width: 70%;
+    height: auto;
 }
 
 
 /* =========================================================
-   CONTEÚDO DO CARD
-========================================================= */
+   CONTEÚDO DO PROJETO
+   ========================================================= */
 
 .projeto-conteudo {
-    padding: 12px;
+    padding: 18px;
 }
 
-.projeto-conteudo h2 {
-    margin: 0 0 8px;
 
-    font-size: 14px;
+/* =========================================================
+   TÍTULO DO PROJETO
+   ========================================================= */
 
-    font-weight: 700;
+.projeto-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    color: #333333;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+.projeto-titulo h2 {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.3;
 }
 
 
 /* =========================================================
    STATUS
-========================================================= */
+   ========================================================= */
 
 .status {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+.status-aprovado {
+    background: #e8f7ed;
+    color: #238443;
+}
+
+
+.status-aguardando {
+    background: #fff5d9;
+    color: #9a7100;
+}
+
+
+.status-recusado {
+    background: #fdeaea;
+    color: #c62828;
+}
+
+
+/* =========================================================
+   DETALHES
+   ========================================================= */
+
+.projeto-detalhes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+
+.detalhe-projeto {
+    display: flex;
     align-items: center;
 
-    padding: 4px 8px;
+    gap: 9px;
 
-    border-radius: 10px;
+    color: #666;
 
-    font-size: 10px;
-
-    font-weight: 500;
+    font-size: 13px;
 }
 
 
-/* CONCLUÍDO */
+.detalhe-projeto i {
+    width: 18px;
 
-.status-concluido {
-    background-color: #e3f5e5;
+    color: rgb(236, 78, 78);
 
-    color: #24943d;
+    font-size: 15px;
 }
 
 
-/* EM ANDAMENTO */
-
-.status-andamento {
-    background-color: #e5f1f5;
-
-    color: #31758c;
-}
-
-
-/* PENDENTE */
-
-.status-pendente {
-    background-color: #fff0df;
-
-    color: #df7135;
+.detalhe-projeto strong {
+    color: #333;
 }
 
 
 /* =========================================================
-   BARRA DE PROGRESSO
-========================================================= */
-
-.barra-progresso {
-    width: 100%;
-
-    height: 5px;
-
-    margin-top: 8px;
-
-    overflow: hidden;
-
-    border-radius: 5px;
-
-    background-color: #e5e8eb;
-}
-
-.progresso {
-    height: 100%;
-
-    border-radius: 5px;
-
-    background-color: rgb(236, 78, 78);
-}
-
-
-/* =========================================================
-   PORCENTAGENS
-========================================================= */
-
-.progresso-100 {
-    width: 100%;
-}
-
-.progresso-95 {
-    width: 95%;
-}
-
-.progresso-80 {
-    width: 80%;
-}
-
-.progresso-70 {
-    width: 70%;
-}
-
-.progresso-30 {
-    width: 30%;
-}
-
-
-/* =========================================================
-   RODAPÉ DO CARD
-========================================================= */
+   RODAPÉ DO PROJETO
+   ========================================================= */
 
 .projeto-rodape {
     display: flex;
-
     align-items: center;
-    justify-content: space-between;
 
-    margin-top: 7px;
+    padding-top: 13px;
+
+    border-top: 1px solid #eee;
+
+    font-size: 13px;
+    color: #238443;
 }
+
 
 .projeto-rodape span {
-    color: #333333;
-
-    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.projeto-rodape i {
-    color: #999999;
 
-    font-size: 12px;
+.projeto-rodape i {
+    font-size: 15px;
 }
 
 
 /* =========================================================
-   TABLET
-========================================================= */
+   NENHUM PROJETO
+   ========================================================= */
 
-@media (max-width: 991px) {
+.nenhum-projeto {
+    background: #fff;
 
-    .sidebar {
-        width: 200px;
-        min-width: 200px;
-    }
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
 
-    .content {
-        padding: 28px 25px;
-    }
+    padding: 60px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.05);
+}
+
+
+.icone-vazio {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #fce9e9;
+
+    color: rgb(236, 78, 78);
+
+    font-size: 28px;
+}
+
+
+.nenhum-projeto h2 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+    color: #333;
+}
+
+
+.nenhum-projeto p {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
 
     .projetos-grid {
         grid-template-columns:
@@ -450,98 +553,165 @@ img {
 
 
 /* =========================================================
-   MOBILE
-========================================================= */
+   RESPONSIVIDADE - MOBILE
+   ========================================================= */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .layout {
-        flex-direction: column;
+        display: block;
     }
+
 
     .sidebar {
-        width: 100%;
-        min-width: 100%;
+        position: relative;
 
+        width: 100%;
         min-height: auto;
 
-        padding: 20px 15px;
+        padding: 15px;
     }
 
+
     .sidebar-logo {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
+
+
+    .sidebar-logo img {
+        width: 120px;
+    }
+
 
     .sidebar nav ul {
         display: flex;
 
         flex-wrap: wrap;
 
-        justify-content: center;
-
-        gap: 8px;
+        gap: 6px;
     }
+
 
     .sidebar nav ul li {
-        margin-bottom: 0;
+        margin: 0;
     }
 
+
     .sidebar nav ul li a {
-        padding: 8px 12px;
+        padding: 9px 10px;
+
+        font-size: 13px;
     }
+
+
+    .sidebar nav ul li a span {
+        display: none;
+    }
+
+
+    .sidebar nav ul li a i {
+        font-size: 18px;
+    }
+
+
+    .menu-sair {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+
 
     .content {
         width: 100%;
+        margin-left: 0;
 
-        padding: 25px 15px;
+        padding: 20px 15px;
     }
+
 
     .cabecalho {
-        flex-direction: column;
+        align-items: flex-start;
 
-        align-items: stretch;
+        gap: 15px;
     }
+
 
     .cabecalho h1 {
         font-size: 24px;
     }
 
+
     .btn-novo-projeto {
-        width: 100%;
+        padding: 9px 12px;
+
+        font-size: 13px;
     }
+
+
+    .btn-novo-projeto i {
+        font-size: 15px;
+    }
+
+
+    .cliente-projetos {
+        padding: 15px;
+    }
+
+
+    .cliente-cabecalho {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
 
     .projetos-grid {
         grid-template-columns: 1fr;
+    }
+
+
+    .projeto-titulo {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
 }
 
 
 /* =========================================================
-   CELULAR PEQUENO
-========================================================= */
+   RESPONSIVIDADE - CELULAR PEQUENO
+   ========================================================= */
 
 @media (max-width: 480px) {
 
-    .sidebar nav ul {
+    .cabecalho {
         flex-direction: column;
     }
 
-    .sidebar nav ul li,
-    .sidebar nav ul li a {
+
+    .btn-novo-projeto {
         width: 100%;
+
+        justify-content: center;
     }
 
-    .sidebar nav ul li a {
-        justify-content: flex-start;
+
+    .cliente-identificacao {
+        align-items: flex-start;
+
+        flex-direction: column;
     }
 
-    .content {
-        padding: 20px 12px;
-    }
 
     .imagem-projeto {
-        height: 160px;
+        height: 130px;
+    }
+
+
+    .projeto-conteudo {
+        padding: 15px;
     }
 
 }

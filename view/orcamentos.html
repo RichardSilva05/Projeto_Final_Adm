@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orçamentos - Painel - Sabino Gesso</title>
     <meta name="robots" content="noindex, nofollow">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/orcamentos.css">
     <script src="../js/sair.js"></script>
 </head>
+
 <body>
 
     <div class="layout">
@@ -21,67 +23,58 @@
             </div>
 
             <nav>
-
                 <ul>
-            
-                    <!-- VISÃO GERAL -->
+
                     <li>
                         <a href="painel.html">
                             <i class="bi bi-house"></i>
                             <span>Visão Geral</span>
                         </a>
                     </li>
-            
-                    <!-- ORÇAMENTOS -->
+
                     <li>
                         <a href="orcamentos.html" class="ativo">
                             <i class="bi bi-receipt"></i>
                             <span>Orçamentos</span>
                         </a>
                     </li>
-            
-                    <!-- CLIENTES -->
+
                     <li>
                         <a href="clientes.html">
                             <i class="bi bi-people"></i>
                             <span>Clientes</span>
                         </a>
                     </li>
-            
-                    <!-- RELATÓRIOS -->
+
                     <li>
                         <a href="relatorios.html">
                             <i class="bi bi-bar-chart-line"></i>
                             <span>Relatórios</span>
                         </a>
                     </li>
-            
-                    <!-- PROJETOS -->
+
                     <li>
                         <a href="projetos.html">
                             <i class="bi bi-kanban"></i>
                             <span>Projetos</span>
                         </a>
                     </li>
-            
-                    <!-- CONFIGURAÇÕES -->
+
                     <li>
                         <a href="configuracoes.html">
                             <i class="bi bi-gear"></i>
                             <span>Configurações</span>
                         </a>
                     </li>
-            
-                    <!-- SAIR -->
+
                     <li class="menu-sair">
                         <a href="login.html" onclick="return confirmarSaida()">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sair</span>
                         </a>
                     </li>
-            
+
                 </ul>
-            
             </nav>
 
         </aside>
@@ -104,12 +97,17 @@
 
                 <div class="table-responsive">
                     <table id="tabelaOrcamentos">
+
                         <thead>
                             <tr>
                                 <th>Cliente</th>
+                                <th>Código</th>
+
                                 <th class="th-ordenavel" id="colunaData">
-                                    Data <i class="bi bi-caret-down-fill"></i>
+                                    Data
+                                    <i class="bi bi-caret-down-fill"></i>
                                 </th>
+
                                 <th>Valor</th>
                                 <th>Status</th>
                                 <th></th>
@@ -117,45 +115,103 @@
                         </thead>
 
                         <tbody>
+
+                            <!-- EXEMPLOS -->
                             <tr data-data="2021-09-15">
                                 <td>João Souza</td>
+                                <td>
+                                    <span class="codigo-cliente">CLI-0001</span>
+                                </td>
                                 <td>15/09/2021</td>
                                 <td>R$ 4.000,00</td>
-                                <td><span class="status status-aguardando">Aguardando</span></td>
-                                <td><button type="button" class="btn-ver-detalhes">Ver Detalhes</button></td>
+                                <td>
+                                    <span class="status status-aguardando">
+                                        Aguardando
+                                    </span>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-ver-detalhes">
+                                        Ver Detalhes
+                                    </button>
+                                </td>
                             </tr>
 
                             <tr data-data="2021-09-13">
                                 <td>Maria Fernandes</td>
+                                <td>
+                                    <span class="codigo-cliente">CLI-0002</span>
+                                </td>
                                 <td>13/09/2021</td>
                                 <td>R$ 5.000,00</td>
-                                <td><span class="status status-aprovado">Aprovado</span></td>
-                                <td><button type="button" class="btn-ver-detalhes">Ver Detalhes</button></td>
+                                <td>
+                                    <span class="status status-aprovado">
+                                        Aprovado
+                                    </span>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-ver-detalhes">
+                                        Ver Detalhes
+                                    </button>
+                                </td>
                             </tr>
 
                             <tr data-data="2021-08-15">
                                 <td>Pedro Lima</td>
+                                <td>
+                                    <span class="codigo-cliente">CLI-0003</span>
+                                </td>
                                 <td>15/08/2021</td>
                                 <td>R$ 3.000,00</td>
-                                <td><span class="status status-aprovado">Aprovado</span></td>
-                                <td><button type="button" class="btn-ver-detalhes">Ver Detalhes</button></td>
+                                <td>
+                                    <span class="status status-aprovado">
+                                        Aprovado
+                                    </span>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-ver-detalhes">
+                                        Ver Detalhes
+                                    </button>
+                                </td>
                             </tr>
 
                             <tr data-data="2021-08-01">
                                 <td>Ana Oliveira</td>
+                                <td>
+                                    <span class="codigo-cliente">CLI-0004</span>
+                                </td>
                                 <td>01/08/2021</td>
                                 <td>R$ 4.000,00</td>
-                                <td><span class="status status-recusado">Recusado</span></td>
-                                <td><button type="button" class="btn-ver-detalhes">Ver Detalhes</button></td>
+                                <td>
+                                    <span class="status status-recusado">
+                                        Recusado
+                                    </span>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-ver-detalhes">
+                                        Ver Detalhes
+                                    </button>
+                                </td>
                             </tr>
 
                             <tr data-data="2021-07-20">
                                 <td>Marcos Peréra</td>
+                                <td>
+                                    <span class="codigo-cliente">CLI-0005</span>
+                                </td>
                                 <td>20/07/2021</td>
                                 <td>R$ 2.000,00</td>
-                                <td><span class="status status-aguardando">Aguardando</span></td>
-                                <td><button type="button" class="btn-ver-detalhes">Ver Detalhes</button></td>
+                                <td>
+                                    <span class="status status-aguardando">
+                                        Aguardando
+                                    </span>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-ver-detalhes">
+                                        Ver Detalhes
+                                    </button>
+                                </td>
                             </tr>
+
                         </tbody>
                     </table>
                 </div>

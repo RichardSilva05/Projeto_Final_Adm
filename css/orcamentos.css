@@ -33,7 +33,7 @@ select {
 
 
 /* =========================================================
- LAYOUT
+   LAYOUT
 ========================================================= */
 
 .layout {
@@ -44,31 +44,27 @@ select {
 
 
 /* =========================================================
- SIDEBAR
+   SIDEBAR
 ========================================================= */
 
 .sidebar {
   width: 220px;
   min-width: 220px;
   min-height: 100vh;
-
   background-color: rgb(236, 78, 78);
-
   padding: 40px 20px;
-
   color: #ffffff;
 }
 
 
 /* =========================================================
- LOGO
+   LOGO
 ========================================================= */
 
 .sidebar-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-bottom: 55px;
 }
 
@@ -79,7 +75,7 @@ select {
 
 
 /* =========================================================
- MENU
+   MENU
 ========================================================= */
 
 .sidebar nav ul {
@@ -95,16 +91,11 @@ select {
 .sidebar nav ul li a {
   display: flex;
   align-items: center;
-
   gap: 10px;
-
   padding: 0 12px;
-
   color: #ffffff;
   text-decoration: none;
-
   font-size: 14px;
-
   transition: opacity 0.2s ease;
 }
 
@@ -114,7 +105,7 @@ select {
 
 
 /* =========================================================
- ÍCONES DO MENU
+   ÍCONES DO MENU
 ========================================================= */
 
 .sidebar nav ul li a i {
@@ -123,85 +114,68 @@ select {
 
 
 /* =========================================================
- ITEM ATIVO
+   ITEM ATIVO
 ========================================================= */
 
 .sidebar nav ul li a.ativo {
   background-color: #ffffff;
-
   color: rgb(236, 78, 78);
-
   border-radius: 8px;
-
   padding-top: 10px;
   padding-bottom: 10px;
-
   font-weight: bold;
 }
 
 
 /* =========================================================
- CONTEÚDO
+   CONTEÚDO
 ========================================================= */
 
 .content {
   flex: 1;
-
   min-width: 0;
-
   padding: 28px 40px;
-
   background-color: #f3f3f3;
 }
 
 
 /* =========================================================
- CABEÇALHO
+   CABEÇALHO
 ========================================================= */
 
 .cabecalho {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   margin-bottom: 28px;
 }
 
 .cabecalho h1 {
   margin: 0;
-
   font-size: 28px;
   font-weight: 700;
-
   color: #000;
 }
 
 
 /* =========================================================
- BOTÃO NOVO ORÇAMENTO
+   BOTÃO NOVO ORÇAMENTO
 ========================================================= */
 
 .btn-novo-orcamento {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 8px;
-
   padding: 11px 18px;
-
   border: none;
   border-radius: 8px;
-
   background-color: rgb(236, 78, 78);
-
   color: #ffffff;
-
+  text-decoration: none;
   font-size: 14px;
   font-weight: bold;
-
   cursor: pointer;
-
   transition: background-color 0.2s ease;
 }
 
@@ -215,33 +189,27 @@ select {
 
 
 /* =========================================================
- CARD DE ORÇAMENTOS
+   CARD DE ORÇAMENTOS
 ========================================================= */
 
 .card-orcamentos {
   width: 100%;
-
   background-color: #ffffff;
-
   border-radius: 12px;
-
   padding: 26px;
-
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .card-orcamentos h2 {
   margin: 0 0 18px;
-
   font-size: 20px;
   font-weight: 700;
-
   color: #000;
 }
 
 
 /* =========================================================
- TABELA
+   TABELA
 ========================================================= */
 
 .table-responsive {
@@ -251,16 +219,14 @@ select {
 
 #tabelaOrcamentos {
   width: 100%;
-
   border-collapse: separate;
   border-spacing: 0;
-
   overflow: hidden;
 }
 
 
 /* =========================================================
- CABEÇALHO DA TABELA
+   CABEÇALHO DA TABELA
 ========================================================= */
 
 #tabelaOrcamentos thead {
@@ -269,21 +235,18 @@ select {
 
 #tabelaOrcamentos thead th {
   padding: 14px;
-
   background-color: rgb(236, 78, 78);
-
   color: #ffffff;
-
   text-align: left;
-
   font-size: 13px;
   font-weight: bold;
-
   border: none;
 }
 
 
-/* Cantos superiores */
+/* =========================================================
+   CANTOS SUPERIORES
+========================================================= */
 
 #tabelaOrcamentos thead th:first-child {
   border-top-left-radius: 8px;
@@ -295,12 +258,11 @@ select {
 
 
 /* =========================================================
- LINHAS
+   LINHAS
 ========================================================= */
 
 #tabelaOrcamentos tbody tr {
   background-color: #ffffff;
-
   transition: background-color 0.2s ease;
 }
 
@@ -310,13 +272,9 @@ select {
 
 #tabelaOrcamentos tbody td {
   padding: 14px;
-
   font-size: 14px;
-
   color: #000000;
-
   border-bottom: 1px solid #e5e5e5;
-
   vertical-align: middle;
 }
 
@@ -326,31 +284,58 @@ select {
 
 
 /* =========================================================
- COLUNA DATA
+   CÓDIGO DO CLIENTE
+========================================================= */
+
+.codigo-cliente {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 82px;
+
+  padding: 5px 9px;
+
+  background-color: #f1f1f1;
+  color: #555555;
+
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   COLUNA DATA
 ========================================================= */
 
 .th-ordenavel {
   cursor: pointer;
+  user-select: none;
+}
+
+.th-ordenavel:hover {
+  background-color: #db4d4d !important;
 }
 
 .th-ordenavel i {
   margin-left: 5px;
-
   font-size: 9px;
 }
 
 
 /* =========================================================
- STATUS
+   STATUS
 ========================================================= */
 
 .status {
   display: inline-block;
-
   padding: 5px 13px;
-
   border-radius: 20px;
-
   font-size: 12px;
   font-weight: bold;
 }
@@ -372,154 +357,145 @@ select {
 
 
 /* =========================================================
- BOTÃO VER DETALHES
+   BOTÃO VER DETALHES
 ========================================================= */
 
 .btn-ver-detalhes {
   padding: 8px 15px;
-
   border: 1px solid #d9d9d9;
-
   border-radius: 7px;
-
   background-color: #ffffff;
-
   color: #000000;
-
   font-size: 13px;
-
   cursor: pointer;
-
   transition:
-      border-color 0.2s ease,
-      background-color 0.2s ease;
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .btn-ver-detalhes:hover {
   background-color: #fafafa;
-
   border-color: rgb(236, 78, 78);
 }
 
 
 /* =========================================================
- TABLET
+   TABLET
 ========================================================= */
 
 @media (max-width: 991px) {
 
   .sidebar {
-      width: 200px;
-      min-width: 200px;
+    width: 200px;
+    min-width: 200px;
   }
 
   .content {
-      padding: 28px 25px;
+    padding: 28px 25px;
   }
 
   .card-orcamentos {
-      padding: 22px;
+    padding: 22px;
   }
 
 }
 
 
 /* =========================================================
- MOBILE
+   MOBILE
 ========================================================= */
 
 @media (max-width: 767px) {
 
   .layout {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .sidebar {
-      width: 100%;
-      min-width: 100%;
-      min-height: auto;
-
-      padding: 20px 15px;
+    width: 100%;
+    min-width: 100%;
+    min-height: auto;
+    padding: 20px 15px;
   }
 
   .sidebar-logo {
-      margin-bottom: 25px;
+    margin-bottom: 25px;
   }
 
   .sidebar nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
 
   .sidebar nav ul li {
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
 
   .sidebar nav ul li a {
-      padding: 8px 12px;
+    padding: 8px 12px;
   }
 
   .content {
-      width: 100%;
-
-      padding: 25px 15px;
+    width: 100%;
+    padding: 25px 15px;
   }
 
   .cabecalho {
-      align-items: flex-start;
-
-      gap: 15px;
-
-      flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
   }
 
   .cabecalho h1 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .btn-novo-orcamento {
-      width: 100%;
+    width: 100%;
   }
 
   .card-orcamentos {
-      padding: 18px;
+    padding: 18px;
   }
 
+  /*
+     A tabela fica com largura mínima para continuar
+     legível no celular e permite rolagem horizontal.
+  */
   #tabelaOrcamentos {
-      min-width: 700px;
+    min-width: 780px;
   }
 
 }
 
 
 /* =========================================================
- CELULAR PEQUENO
+   CELULAR PEQUENO
 ========================================================= */
 
 @media (max-width: 480px) {
 
   .sidebar nav ul {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .sidebar nav ul li,
   .sidebar nav ul li a {
-      width: 100%;
+    width: 100%;
   }
 
   .sidebar nav ul li a {
-      justify-content: flex-start;
+    justify-content: flex-start;
   }
 
   .content {
-      padding: 20px 12px;
+    padding: 20px 12px;
   }
 
   .card-orcamentos {
-      padding: 15px;
+    padding: 15px;
   }
 
 }
